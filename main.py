@@ -86,12 +86,12 @@ if __name__ == "__main__":
     try:
         summary, test_questions = process_pdf_and_generate_summary_and_test(INPUT_PDF_PATH)
 
-        with open("summary_next.txt", "w", encoding="utf-8") as summary_file:
+        with open("summary.txt", "w", encoding="utf-8") as summary_file:
             summary_file.write(summary)
         with open("test_questions.txt", "w", encoding="utf-8") as questions_file:
             questions_file.write(test_questions)
 
-        print("\nSummary and test questions saved to files: 'summary_next.txt' and 'test_questions.txt'.")
+        print("\nSummary and test questions saved to files: 'summary.txt' and 'test_questions.txt'.")
     except FileNotFoundError:
         print(f"File not found: {INPUT_PDF_PATH}")
     except Exception as e:
